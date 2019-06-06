@@ -1,10 +1,20 @@
 import _ from 'lodash';
+import './style.css';
+import Icon from './icon.png';
+import Data from './data.xml';
 
 function component() {
-    let element = document.createElement('div');
-    console.log(_);
+    const element = document.createElement('div');
     element.innerHTML = _.join(['Hello', 'webpack', '!', '你好11', '!'], ' ');
+    element.classList.add('hello');
 
+
+    const myIcon = new Image();
+    myIcon.src = Icon;
+
+    element.appendChild(myIcon);
+
+    console.log(Data);
     return element;
 }
 
